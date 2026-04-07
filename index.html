@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wolfenstein 3D-Style Raycaster</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1a1a1a;
+      color: #fff;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #f00;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    #game-container {
+      border: 4px solid #444;
+      background-color: #000;
+      margin-bottom: 20px;
+    }
+
+    #controls {
+      background-color: #222;
+      padding: 15px 25px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    #controls h3 {
+      margin-bottom: 10px;
+      color: #0f0;
+    }
+
+    #controls table {
+      margin: 0 auto;
+    }
+
+    #controls td {
+      padding: 5px 15px;
+      text-align: left;
+    }
+
+    #controls td:first-child {
+      font-weight: bold;
+      color: #ff0;
+    }
+
+    #renderer-info {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>Raycaster FPS</h1>
+
+  <div id="game-container"></div>
+
+  <div id="controls">
+    <h3>Controls</h3>
+    <table>
+      <tr>
+        <td>W / S</td>
+        <td>Move forward / backward</td>
+      </tr>
+      <tr>
+        <td>A / D</td>
+        <td>Strafe left / right</td>
+      </tr>
+      <tr>
+        <td>Left / Right</td>
+        <td>Rotate</td>
+      </tr>
+      <tr>
+        <td>P</td>
+        <td>Switch renderer</td>
+      </tr>
+    </table>
+    <div id="renderer-info">Renderer: Canvas 2D</div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
