@@ -1,0 +1,16 @@
+{
+	admin off
+}
+
+:80 {
+	root * /srv
+
+	@allowed path_regexp ^/(index\.html|public/.+)$
+	handle @allowed {
+		file_server
+	}
+
+	handle {
+		respond 404
+	}
+}
